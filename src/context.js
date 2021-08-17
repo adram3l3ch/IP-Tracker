@@ -40,9 +40,10 @@ export const ContextProvider = ({ children }) => {
 			}
 			setState({
 				ip: data.ip,
-				loc: `${data.location.country}, ${data.location.region}, ${data.location.city}`,
+				loc: `${data.location.country}, ${data.location.region}`,
 				time: `UTC ${data.location.timezone}`,
 				isp: data.isp,
+				city: data.location.city,
 			});
 		} catch (error) {
 			clearTimeout(timeOut);

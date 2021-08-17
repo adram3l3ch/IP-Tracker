@@ -5,9 +5,9 @@ import { Wrapper } from "./Map.style";
 export const Map = () => {
 	const { state } = useGlobalContext();
 	const URL = "https://www.google.com/maps/embed/v1/place?q=";
-	const place = `${URL}${state.loc
-		.split(" ")
-		.join("+")}&key=AIzaSyAK37nCzW9CegBtoJKQH6hi5E93Ni7nsKs`;
+	const place = `${URL}${state.loc.replace(" ", "+")}+${
+		state.city
+	}&key=AIzaSyAK37nCzW9CegBtoJKQH6hi5E93Ni7nsKs`;
 
 	return (
 		<Wrapper>

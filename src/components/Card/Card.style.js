@@ -29,6 +29,15 @@ export const Wrapper = styled.div`
 				margin-top: 0;
 			}
 		}
+
+		&:nth-child(2) {
+			p:nth-child(3) {
+				margin-top: 5px;
+				font-size: 1rem;
+				font-weight: 400;
+				color: black;
+			}
+		}
 		h2 {
 			font-weight: 500;
 			margin-top: 10px;

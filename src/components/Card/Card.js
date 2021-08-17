@@ -15,6 +15,7 @@ const Card = () => {
 			<div className="details">
 				<p>LOCATION</p>
 				<h2>{state.loc}</h2>
+				<p> {`( ${state.city} )`}</p>
 			</div>
 			<div className="details">
 				<p>TIMEZONE</p>
