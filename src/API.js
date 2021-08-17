@@ -7,7 +7,7 @@ export const fetchIP = async (ip) => {
 	return data;
 };
 
-export const fetchUserIP = async (ip) => {
+export const fetchUserIP = async () => {
 	const resp = await fetch("https://api.ipify.org/?format=json");
 	const data = await resp.json();
 	return data;
