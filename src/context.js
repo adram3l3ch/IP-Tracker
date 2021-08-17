@@ -55,7 +55,7 @@ export const ContextProvider = ({ children }) => {
 			});
 			timeOut = setTimeout(
 				() => setModal({ ...modal, modalOpen: false }),
-				3000
+				5000
 			);
 		}
 		setIsLoading(false);

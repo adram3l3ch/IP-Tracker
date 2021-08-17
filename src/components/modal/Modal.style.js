@@ -11,4 +11,8 @@ export const Wrapper = styled.div`
 	border-radius: 10px;
 	box-shadow: 0 10px 20px #0001;
 	text-align: center;
+
+	@media (min-width: 768px) {
+		top: 180px;
+	}
 `;
