@@ -15,15 +15,7 @@ const Searchbar = () => {
 	let timeout;
 	return (
 		<Wrapper>
-			<Input
-				type="text"
-				value={searchTerm}
-				onChange={(e) => {
-					setSearchTerm(e.target.value);
-				}}
-			/>
-			<Button
-				onClick={() => {
+			<form onSubmit={() => {
 					if (!searchTerm) {
 						clearTimeout(timeout);
 						setModal({
@@ -36,10 +28,19 @@ const Searchbar = () => {
 					} else {
 						fetchIPDetails(searchTerm);
 					}
+				}}>
+				<Input
+				type="text"
+				value={searchTerm}
+				onChange={(e) => {
+					setSearchTerm(e.target.value);
 				}}
-			>
+			/>
+			<Button type="submit">
 				<Image src={Arrow} />
 			</Button>
+			</form>
+			
 		</Wrapper>
 	);
 };
