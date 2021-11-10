@@ -15,7 +15,8 @@ const Searchbar = () => {
 	let timeout;
 	return (
 		<Wrapper>
-			<form onSubmit={() => {
+			<form onSubmit={(e) => {
+					e.preventDefault();
 					if (!searchTerm) {
 						clearTimeout(timeout);
 						setModal({
