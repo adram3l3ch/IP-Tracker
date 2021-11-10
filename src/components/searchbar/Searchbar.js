@@ -15,7 +15,7 @@ const Searchbar = () => {
 	let timeout;
 	return (
 		<Wrapper>
-			<form onSubmit={(e) => {
+			<form style={{"width":"100%","height":"100%"}} onSubmit={(e) => {
 					e.preventDefault();
 					if (!searchTerm) {
 						clearTimeout(timeout);
